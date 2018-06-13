@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class AddButtonComponent implements OnInit {
 
   @Input() value: number;
-  @Output() clicked: EventEmitter<number> = new EventEmitter()
+  @Output() clicked: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
 
