@@ -14,7 +14,7 @@ export class AddButtonComponent implements OnInit {
   }
 
   add() {
-    this.stateManager.executeAction({type: ActionType.Increment})
+    this.stateManager.executeAction({type: ActionType.Increment});
   }
 
 }
