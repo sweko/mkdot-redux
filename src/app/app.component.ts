@@ -9,7 +9,7 @@ export class AppComponent {
 
   value: number;
 
-  title = 'My #Tarabica18 app';
+  title = 'My MkDotNet June app';
 
   valueChanged(value) {
     this.value = value;
