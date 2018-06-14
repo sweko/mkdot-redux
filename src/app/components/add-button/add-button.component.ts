@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { StateService } from '../../services/state-service';
 
 @Component({
   selector: 'add-button',
@@ -7,16 +8,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class AddButtonComponent implements OnInit {
 
-  @Input() value: number;
-  @Output() clicked: EventEmitter<number> = new EventEmitter();
+  value: number;
 
-  constructor() { }
+  constructor(private stateService: StateService) { }
 
   ngOnInit() {
+    this.value = this.stateService.getState().value;
   }
 
   add() {
-    this.clicked.emit(this.value + 1);
+    this.stateService.executeAction({type: "increment"});
   }
 
 }

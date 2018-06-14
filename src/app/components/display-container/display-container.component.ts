@@ -7,8 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplayContainerComponent implements OnInit {
 
-  @Input() value: number;
-
   constructor() { }
 
   ngOnInit() {
